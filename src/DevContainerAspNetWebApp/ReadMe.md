@@ -29,6 +29,9 @@ dotnet dev-certs https --trust; dotnet dev-certs https -ep "$env:USERPROFILE/.as
 
 1. From the command platte find Remote-Container: Reopen in container.
 2. When this command executes Visual Studio Code will reopn in a different mode. It will connect to a Vs Code server inside of a container. 
+
+![Open the solution in container](VsCodeOpenDevContainer.jpg)
+
 3. Press F5.
 
 # References # 
