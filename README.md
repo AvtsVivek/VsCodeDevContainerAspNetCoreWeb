@@ -11,3 +11,5 @@ Now launch the program.
 
 ![Launch Program](/images/RunAndDebug.jpg "Launch the program")
 
+For ExpressAppWithDocker and ExpressAppWithDockerCompose apps, the reference is
+https://code.visualstudio.com/docs/containers/quickstart-node
