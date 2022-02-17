@@ -2,19 +2,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
             "name": ".NET Core Launch A (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildA",
-            // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/ServiceA/bin/Debug/net6.0/ServiceA.dll",
             "args": [],
             "cwd": "${workspaceFolder}/ServiceA",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -27,19 +22,14 @@
             }
         },
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
             "name": ".NET Core Launch B (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "buildB",
-            // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/ServiceB/bin/Debug/net6.0/ServiceB.dll",
             "args": [],
             "cwd": "${workspaceFolder}/ServiceB",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -55,12 +45,32 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        },
+        {
+            "name": "Launch Microsoft Edge for B and open the Edge DevTools",
+            "request": "launch",
+            "type": "vscode-edge-devtools.debug",
+            "url": "https://localhost:7263/helloB"
+        },
+        {
+            "name": "Launch Microsoft Edge for A and open the Edge DevTools",
+            "request": "launch",
+            "type": "vscode-edge-devtools.debug",
+            "url": "https://localhost:7114/helloA"
         }
     ],
     "compounds": [
         {
-            "name": "Compound",
+            "name": "ServicesCompound",
             "configurations": [ ".NET Core Launch A (web)", ".NET Core Launch B (web)"]
+        },
+        {
+            "name": "ServicesCompoundWithBrowsers",
+            "configurations": [ ".NET Core Launch A (web)", 
+                ".NET Core Launch B (web)",
+                "Launch Microsoft Edge for A and open the Edge DevTools",
+                "Launch Microsoft Edge for B and open the Edge DevTools"
+            ]
         }
     ]
 }
