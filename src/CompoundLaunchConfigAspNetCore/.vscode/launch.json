@@ -10,6 +10,8 @@
             "args": [],
             "cwd": "${workspaceFolder}/ServiceA",
             "stopAtEntry": false,
+            // https://stackoverflow.com/a/58406148/1977871
+            // "uriFormat": "%s/swagger"
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -30,6 +32,8 @@
             "args": [],
             "cwd": "${workspaceFolder}/ServiceB",
             "stopAtEntry": false,
+            // https://stackoverflow.com/a/58406148/1977871
+            // "uriFormat": "%s/swagger"
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
